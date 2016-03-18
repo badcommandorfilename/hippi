@@ -29,12 +29,13 @@ namespace Hippi
                         var response = new ChatMessage { color = "red" }; //Return object
                         try
                         {
-                            response = Echo(context.Request);
+                            response = Echo(context.Request); //Get response message from Echo function
                         }
                         catch(Exception ex)
                         {
                             response.message = $"Sorry, I couldn't understand that: {ex.Message}";
                         }
+
                         await context.Response.WriteAsync(
                             JsonConvert.SerializeObject(response)); //Write response in JSON format
                     });

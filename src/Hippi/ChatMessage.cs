@@ -10,9 +10,9 @@ namespace Hippi
     /// </summary>
     public class ChatMessage
     {
-        public string color = "black";
-        public string message = "";
-        public bool notify = false;
-        public string message_format = "text";
+        public string color { get; set; } = "black";
+        public string message { get; set; } = "";
+        public bool notify { get; set; } = false;
+        public string message_format { get; set; } = "text";
     }
 }
